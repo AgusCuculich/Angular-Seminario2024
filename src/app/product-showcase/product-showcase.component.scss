@@ -1,0 +1,25 @@
+.productCard {
+    height: 300px;
+    background-color: #e48082;
+    width: 250px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-rows: 80% 20%;
+    align-items: center;
+    justify-items: center;
+    border: 2px solid black;
+    .circle {
+        background-color: white;
+        height: 80%;
+        width: 80%;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        border: 2px solid black;
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            margin: auto;
+        }
+    }
+}

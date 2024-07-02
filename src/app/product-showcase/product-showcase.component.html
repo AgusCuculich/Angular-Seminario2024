@@ -1,0 +1,8 @@
+@for (product of products; track product.id) {
+    <div class="productCard">
+        <div class="circle">
+            <img [src] = "product.img" [alt] = "product.name" />
+        </div>
+        <h2>{{product.name | titlecase }}</h2>
+    </div>
+}
