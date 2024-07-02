@@ -4,5 +4,15 @@
             <img [src] = "product.img" [alt] = "product.name" />
         </div>
         <h2>{{product.name | titlecase }}</h2>
+        <div class="currencyContainer">
+            <div class="currency">
+                <img src="../../assets/img/arg.png"/>
+                <p>{{product.price | currency }}</p>
+            </div>
+            <div class="currency">
+                <img src="../../assets/img/US.png"/>
+                <p>{{product.price | currency }}</p>
+            </div>
+        </div>
     </div>
 }

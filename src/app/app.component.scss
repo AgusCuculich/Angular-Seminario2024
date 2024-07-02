@@ -49,5 +49,6 @@ section.products {
         row-gap: 20px;
         flex-wrap: wrap;
         overflow-y: scroll;
+        justify-content: space-around;
     }
 }

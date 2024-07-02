@@ -4,13 +4,13 @@
     width: 250px;
     border-radius: 20px;
     display: grid;
-    grid-template-rows: 80% 20%;
+    grid-template-rows: 70% 20% 10%;
     align-items: center;
     justify-items: center;
     border: 2px solid black;
     .circle {
         background-color: white;
-        height: 80%;
+        height: 90%;
         width: 80%;
         border-radius: 100%;
         display: flex;
@@ -20,6 +20,17 @@
             max-width: 100%;
             max-height: 100%;
             margin: auto;
+        }
+    }
+    .currencyContainer{
+        display: grid;
+        width: 100%;
+        grid-template-columns: 50% 50%;
+        .currency{
+            display: flex;
+            justify-content: center;
+            font-weight: bolder;
+            gap: 5px;
         }
     }
 }
