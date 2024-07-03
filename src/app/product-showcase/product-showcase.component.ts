@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { Product } from './Product';
 import { TitleCasePipe } from '@angular/common';
-import { CommonModule } from '@angular/common';
+import { CurrencyComponent } from '../currency/currency.component';
 
 @Component({
   selector: 'app-product-showcase',
   standalone: true,
-  imports: [TitleCasePipe, CommonModule],
+  imports: [TitleCasePipe, CurrencyComponent],
   templateUrl: './product-showcase.component.html',
   styleUrl: './product-showcase.component.scss'
 })

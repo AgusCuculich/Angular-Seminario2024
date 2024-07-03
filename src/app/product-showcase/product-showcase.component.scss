@@ -36,12 +36,6 @@
             display: grid;
             width: 100%;
             grid-template-columns: 50% 50%;
-            .currency{
-                display: flex;
-                justify-content: center;
-                font-weight: bolder;
-                gap: 5px;
-            }
         }
     .mini {
         position: absolute;
