@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Product } from './Product';
 import { TitleCasePipe } from '@angular/common';
 import { CurrencyComponent } from '../currency/currency.component';
+import { ProductCartService } from '../product-cart.service';
 
 @Component({
   selector: 'app-product-showcase',
@@ -10,12 +11,12 @@ import { CurrencyComponent } from '../currency/currency.component';
   templateUrl: './product-showcase.component.html',
   styleUrl: './product-showcase.component.scss'
 })
-export class ProductShowcaseComponent {
+export class ProductShowcaseComponent implements OnInit {
   products: Product[] = [
     {
       id: 1,
       name: 'standard cut',
-      img: '../assets/img/standard.png',
+      img: 'assets/img/standard.png',
       price: 10,
     },
     {
@@ -62,7 +63,18 @@ export class ProductShowcaseComponent {
     }
   ];
 
-  constructor() { }
+  constructor(private cart: ProductCartService) { } //Inyectamos la dependencia del servicio.
+  /**
+   * Cuando se construya el componente, se instanciará la clase "ProductCartService" o se devolverá la instancia ya existente.
+   * Declara que cart es una propiedad privada de la clase, y a su vez, asigna automáticamente el valor del parámetro cart 
+   * del constructor a esta propiedad interna de la clase (evita la necesidad de declarar y asignar la propiedad manualmente 
+   * dentro de la clase).
+   * Es buena práctica inyectar los servicios en lugar de instanciarlos (incluso si se lo usa en un servicio).
+   */
 
-  ngOnInit() { }
+  ngOnInit(): void { }
+
+  addToCart(product: Product): void {
+    this.cart.addToCart(product);
+  }
 }
