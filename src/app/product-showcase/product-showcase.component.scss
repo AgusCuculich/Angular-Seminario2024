@@ -37,12 +37,20 @@
             width: 100%;
             grid-template-columns: 50% 50%;
         }
-    .mini {
+    .cartBtt {
         position: absolute;
-        top: 8%; /* Ajusta para centrar verticalmente */
+        height: 35px;
+        width: 35px;
+        border-radius: 100%;
+        top: 2%; /* Ajusta para centrar verticalmente */
         right: 8%; /* Posiciona la imagen en la derecha */
-        transform: translateY(-50%); /* Centra verticalmente */
         z-index: 10; /* Asegura que la imagen esté al frente */
+        img {
+            height: 25px;
+            position: relative;
+            top: 10%; /* Ajusta para centrar verticalmente */
+            right: 5%; /* Posiciona la imagen en la derecha */
+        }
     }
     }
 }
