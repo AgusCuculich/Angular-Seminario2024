@@ -1,17 +1,20 @@
-<div class="productsContainer">
-    @for (product of products; track product.id) {
-        <div class="productCard">
-            <div class="circle">
-                <img [src] = "product.img" [alt] = "product.name" />
+<section class="products">
+    <h1>Featured Products</h1>
+    <div class="productsContainer">
+        @for (product of products; track product.id) {
+            <div class="productCard">
+                <div class="circle">
+                    <img [src] = "product.img" [alt] = "product.name" />
+                </div>
+                <h2>{{product.name | titlecase }}</h2>
+                <div class="currencyContainer">
+                    <app-currency [precioDolares]="product.price" [precioPesos]="product.price" [pais]="'US'"></app-currency>
+                    <app-currency [precioDolares]="product.price" [precioPesos]="product.price" [pais]="'arg'"></app-currency>
+                </div>
+                <button class="cartBtt" (click)="addToCart(product)">
+                    <img src='assets/img/cartIcon.png' alt="Cart icon"/>
+                </button>
             </div>
-            <h2>{{product.name | titlecase }}</h2>
-            <div class="currencyContainer">
-                <app-currency [precioDolares]="product.price" [precioPesos]="product.price" [pais]="'US'"></app-currency>
-                <app-currency [precioDolares]="product.price" [precioPesos]="product.price" [pais]="'arg'"></app-currency>
-            </div>
-            <button class="cartBtt" (click)="addToCart(product)">
-                <img src='assets/img/cartIcon.png' alt="Cart icon"/>
-            </button>
-        </div>
-    }
-</div>
+        }
+    </div>
+</section>

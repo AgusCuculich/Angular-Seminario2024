@@ -1,3 +1,19 @@
-<div class="cartContainer">
-    
-</div>
+<section class="cart">
+    <h1>Shopping Cart</h1>
+    <div class="cartContainer">
+        <ul class="shoppingCart">
+            <tr>
+                <th>Producto</th>
+                <th>Precio Unitario</th>
+                <th>Cantidad(kg)</th>
+            </tr>
+            @for (product of shoppingCart; track product.id) {
+                <tr>{{product.name}}</tr>
+                <tr>{{product.price}}</tr>
+                <tr>Cantidad</tr>
+            }
+        </ul>
+    </div>
+</section>
+
+<!--en el theader que vayan los nombres de las columnas y en el footer el resumen final-->

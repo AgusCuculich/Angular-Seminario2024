@@ -1,2 +1,13 @@
-.cartContainer {
+section.cart {
+    grid-area: shopping;
+    height: 100%;
+    background-color: white;
+    background-image: url(../../assets/img/emptyCart.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px;
+    border-radius: 20px;
+    h1 {
+        text-align: center;
+    }
 }

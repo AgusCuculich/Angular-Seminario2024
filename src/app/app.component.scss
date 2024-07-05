@@ -31,19 +31,6 @@
     }
 }
 
-/*Products*/
-section.products {
-    grid-area: products;
-    height: 100%;
-    background-color: white;
-    padding: 20px;
-    border-radius: 20px;
-    h1 {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-}
-
 main {
     display: grid;
     grid-template-columns: repeat(2, 49%);
@@ -51,19 +38,4 @@ main {
     grid-template-rows: minmax(400px, auto);
     grid-template-areas: 
     "products shopping";
-}
-
-/*Cart*/
-section.cart {
-    grid-area: shopping;
-    height: 100%;
-    background-color: white;
-    background-image: url(../assets/img/emptyCart.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 20px;
-    border-radius: 20px;
-    h1 {
-        text-align: center;
-    }
 }
