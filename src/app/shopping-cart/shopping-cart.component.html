@@ -1,18 +1,35 @@
 <section class="cart">
     <h1>Shopping Cart</h1>
     <div class="cartContainer">
-        <ul class="shoppingCart">
-            <tr>
-                <th>Producto</th>
-                <th>Precio Unitario</th>
-                <th>Cantidad(kg)</th>
-            </tr>
-            @for (product of shoppingCart; track product.id) {
-                <tr>{{product.name}}</tr>
-                <tr>{{product.price}}</tr>
-                <tr>Cantidad</tr>
-            }
-        </ul>
+        <table class="shoppingCart">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio Por Kilo</th>
+                    <th>Cantidad(kg)</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (product of shoppingCart; track product.id) {
+                    <tr>
+                        <td>{{product.name | titlecase}}</td>
+                        <td>{{product.price}}</td>
+                        <td class="quantityColumn">
+                            <button (click)="modifyQuantity(1)">+</button>
+                            {{product.quantity}}
+                            <button (click)="modifyQuantity(-1)">-</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Resumen final:</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
     </div>
 </section>
 

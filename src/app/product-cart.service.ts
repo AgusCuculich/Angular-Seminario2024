@@ -30,6 +30,7 @@ export class ProductCartService {
     let item: Product | undefined = this._shoppingCart.find((x) => x.id == product.id);
 
     if (!item) {
+      product.quantity++;
       this._shoppingCart.push({... product});
       this.shoppingCart.next(this._shoppingCart);
     }
@@ -37,8 +38,10 @@ export class ProductCartService {
      * 1. El if anterior checkea que el item no este exista en el carrito de compras para así añadirlo (nos asegura que no se 
      * repitan items iguales en el carrito).
      * 2. El BehaviourSubject no detecta los cambios, con lo que hay que indicarle que emita (next) los mismos.
+     * 3. Como las cantidades a comprar de cada producto están seteadas a 0, antes de que se añada un producto al carrito se
+     * deberá aumentar la cantidad del mismo en 1.
      */
 
-    //console.log(this._shoppingCart);
+    console.log(this._shoppingCart);
   }
 }

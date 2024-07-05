@@ -11,3 +11,37 @@ section.cart {
         text-align: center;
     }
 }
+
+table {
+    width: 100%;
+    display: table;
+    border-collapse: collapse;
+}
+
+th, td {
+    border-bottom: 1px solid black;
+    text-align: center;
+    padding: 8px;
+}
+
+thead, tbody, tr {
+    display: table-row;
+}
+
+tr {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+tfoot {
+    //display: none;
+    th, td {
+        border: none;
+        margin-top: 20px;
+    }
+}
+
+.quantityColumn {
+    display: flex;
+    justify-content: space-evenly;
+}

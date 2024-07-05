@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductCartService } from '../product-cart.service';
 import { Product } from '../product-showcase/Product';
+import { TitleCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-shopping-cart',
   standalone: true,
-  imports: [],
+  imports: [TitleCasePipe],
   templateUrl: './shopping-cart.component.html',
   styleUrl: './shopping-cart.component.scss'
 })
@@ -20,6 +21,10 @@ export class ShoppingCartComponent implements OnInit {
 
   constructor(private cart: ProductCartService) {
     cart.shoppingCart.subscribe((arrCompras) => this.shoppingCart = arrCompras);
+  }
+
+  modifyQuantity(num: number) {
+    
   }
 
   ngOnInit(): void { }
