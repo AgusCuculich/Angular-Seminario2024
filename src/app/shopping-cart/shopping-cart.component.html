@@ -11,7 +11,10 @@
                 </tr>
             </thead>
             <tbody>
-                @for (product of shoppingCart; track product.id) {
+                @for (product of shoppingCart$ | async; track product.id) {
+                <!--The async pipe subscribes to an Observable or Promise and returns the latest value it has emitted. 
+                When a new value is emitted, the async pipe marks the component to be checked for changes. When the 
+                component gets destroyed, the async pipe unsubscribes automatically to avoid potential memory leaks.-->
                     <tr>
                         <td>{{product.name | titlecase}}</td>
                         <td>{{product.price}}</td>
@@ -41,5 +44,3 @@
         </table>
     </div>
 </section>
-
-<!--en el theader que vayan los nombres de las columnas y en el footer el resumen final-->
