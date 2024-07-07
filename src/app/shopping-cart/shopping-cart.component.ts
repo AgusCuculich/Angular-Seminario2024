@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ProductCartService } from '../product-cart.service';
 import { Product } from '../product-showcase/Product';
 import { TitleCasePipe } from '@angular/common';
@@ -23,8 +23,12 @@ export class ShoppingCartComponent implements OnInit {
     cart.shoppingCart.subscribe((arrCompras) => this.shoppingCart = arrCompras);
   }
 
-  modifyQuantity(num: number) {
-    
+  deleteFromCart(product: Product): void {
+    this.cart.deleteFromCart(product);
+  }
+
+  modifyQuantity(num: number, product: Product): void {
+    this.cart.modifyQuantity(num, product);
   }
 
   ngOnInit(): void { }

@@ -2,46 +2,53 @@ section.cart {
     grid-area: shopping;
     height: 100%;
     background-color: white;
-    background-image: url(../../assets/img/emptyCart.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 20px;
+    padding: 3%;
     border-radius: 20px;
     h1 {
         text-align: center;
     }
+    .cartContainer {
+        position: relative;
+        height: calc(100% - 10%);
+    }
 }
 
-table {
+table.shoppingCart {
     width: 100%;
     display: table;
     border-collapse: collapse;
 }
 
-th, td {
+table.shoppingCart th, td {
     border-bottom: 1px solid black;
     text-align: center;
     padding: 8px;
 }
 
-thead, tbody, tr {
+table.shoppingCart thead, tbody, tr {
     display: table-row;
 }
 
-tr {
+table tr {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-tfoot {
-    //display: none;
-    th, td {
-        border: none;
-        margin-top: 20px;
-    }
+    grid-template-columns: repeat(3, 1fr) 0.2fr;
 }
 
 .quantityColumn {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
+}
+
+table.resume {
+    position: sticky;
+    width: 100%;
+    top: 100%;
+    tr, td {
+        border: none;
+    }
+}
+
+button {
+    height: 24px;
+    width: 24px;
 }
