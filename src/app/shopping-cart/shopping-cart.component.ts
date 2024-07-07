@@ -15,16 +15,19 @@ import { Observable } from 'rxjs';
 })
 export class ShoppingCartComponent implements OnInit {
   /*
-   * Esta clase se encarga del carrito de compras. Utiliza el servicio "ProductCartService" para siempre tener la última versión 
-   * del arreglo del carrito de compras. Cada vez que hay un cambio en esta lista, el servicio avisa a la clase, y la clase 
-   * actualiza su propia lista de productos
-   */
+  Esta clase se encarga del carrito de compras. Utiliza el servicio "ProductCartService" para siempre tener la última versión 
+  del arreglo del carrito de compras. Cada vez que hay un cambio en esta lista, el servicio avisa a la clase, y la clase 
+  actualiza su propia lista de productos
+  */
+
+  total$: Observable<number> | undefined;
   
   shoppingCart$: Observable<Product[]> | undefined;
   //El $ es una conveción que se utiliza para indicar que es el observable que se utiliza con un pipe, y no el dato real.
 
   constructor(private cart: ProductCartService) {
     this.shoppingCart$ = cart.shoppingCart.asObservable();
+    this.total$ = cart.total.asObservable();
   }
   /*
   El uso de la variable shoppingCart convirtada en un observable junto al uso de asObservable(), nos permite utilizar el

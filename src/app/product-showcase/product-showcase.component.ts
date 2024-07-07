@@ -72,13 +72,13 @@ export class ProductShowcaseComponent implements OnInit {
   ];
 
   constructor(private cart: ProductCartService) { } //Inyectamos la dependencia del servicio.
-  /**
-   * Cuando se construya el componente, se instanciará la clase "ProductCartService" o se devolverá la instancia ya existente.
-   * Declara que cart es una propiedad privada de la clase, y a su vez, asigna automáticamente el valor del parámetro cart 
-   * del constructor a esta propiedad interna de la clase (evita la necesidad de declarar y asignar la propiedad manualmente 
-   * dentro de la clase).
-   * Es buena práctica inyectar los servicios en lugar de instanciarlos (incluso si se lo usa en un servicio).
-   */
+  /*
+  Cuando se construya el componente, se instanciará la clase "ProductCartService" o se devolverá la instancia ya existente.
+  Declara que cart es una propiedad privada de la clase, y a su vez, asigna automáticamente el valor del parámetro cart 
+  del constructor a esta propiedad interna de la clase (evita la necesidad de declarar y asignar la propiedad manualmente 
+  dentro de la clase).
+  Es buena práctica inyectar los servicios en lugar de instanciarlos (incluso si se lo usa en un servicio).
+  */
 
   ngOnInit(): void { }
 
@@ -86,3 +86,4 @@ export class ProductShowcaseComponent implements OnInit {
     this.cart.addToCart(product);
   }
 }
+
