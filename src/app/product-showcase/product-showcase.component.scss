@@ -2,25 +2,25 @@ section.products {
     grid-area: products;
     height: 100%;
     background-color: white;
-    padding: 20px;
+    padding: 2rem;
     border-radius: 20px;
     h1 {
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 2rem;
     }
     .productsContainer {
     width: 100%;
-    height: 300px;
+    height: 30rem;
     display: grid;
-    grid-template-columns: repeat(3, auto);
-    row-gap: 20px;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 25rem));
+    place-items: center;
+    row-gap: 2rem;
     overflow-y: scroll;
     justify-content: space-around;
     .productCard {
-        height: 300px;
+        height: 30rem;
         background-color: #b8c7e8;
-        width: 250px;
+        width: 25rem;
         border-radius: 20px;
         display: grid;
         grid-template-rows: 70% 20% 10%;
@@ -49,14 +49,14 @@ section.products {
         }
     .cartBtt {
         position: absolute;
-        height: 35px;
-        width: 35px;
+        height: 3.5rem;
+        width: 3.5rem;
         border-radius: 100%;
         top: 2%; /* Ajusta para centrar verticalmente */
         right: 8%; /* Posiciona la imagen en la derecha */
         z-index: 10; /* Asegura que la imagen esté al frente */
         img {
-            height: 25px;
+            height: 2.5rem;
             position: relative;
             top: 10%; /* Ajusta para centrar verticalmente */
             right: 5%; /* Posiciona la imagen en la derecha */

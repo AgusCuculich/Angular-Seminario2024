@@ -1,21 +1,24 @@
-/*mainHeader*/
 #mainHeader {
     display: grid;
     height: fit-content;
-    grid-template-columns: 20% 80%;
-    margin-bottom: 20px;
+    grid-template-rows: auto auto;
+    margin-bottom: 2vh;
+    text-align: center;
     h1 {
-        text-align: center;
+        padding: 2%;
+        font-size: 4rem;
     }
     nav {
+        align-content: center;
         ul {
-            height: 100%;
+            height: fit-content;
             list-style: none;
             display: flex;
             justify-content: space-evenly;
             align-items: center;
             background-color: white;
-            border-radius: 20px;
+            border-radius: 2rem;
+            padding: 0.3rem;
             border: 2px solid black;
             li {
                 width: fit-content;
@@ -33,9 +36,31 @@
 
 main {
     display: grid;
-    grid-template-columns: repeat(2, 49%);
-    column-gap: 2%;
-    grid-template-rows: minmax(400px, auto);
-    grid-template-areas: 
-    "products shopping";
+    grid-template-rows: repeat (2, minmax(400px, auto));
+    gap: 2%;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1199px) {
+
+    #mainHeader {
+        grid-template-rows: none;
+        grid-template-columns: 30% 70%;
+        h1 {
+            font-size: 3.3rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+
+    #mainHeader {
+        grid-template-rows: none;
+        grid-template-columns: 20% 80%;
+    }
+
+    main {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "products shopping";
+    }
 }

@@ -1,6 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap');
 
+html{
+    font-size: 10px;
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -10,11 +14,13 @@
 
 body {
     min-height: 100vh;
-    padding: 20px;
+    width: 100vw;
+    padding: 2vw;
     background-color: #efeae4;
     display: grid;
-    grid-template-rows: min-content auto auto;
-    grid-row-gap: 20px;
+    grid-template-rows: fit-content auto auto;
+    grid-row-gap: 2vw;
+    font-size: 1.8rem;
 }
 
 router-outlet {
