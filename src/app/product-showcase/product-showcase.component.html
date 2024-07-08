@@ -1,7 +1,7 @@
 <section class="products">
     <h1>Featured Products</h1>
     <div class="productsContainer">
-        @for (product of products; track product.id) {
+        @for (product of potato$ | async; track product.id) {
             <div class="productCard">
                 <div class="circle">
                     <img [src] = "product.img" [alt] = "product.name" />

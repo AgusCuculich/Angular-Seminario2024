@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductShowcaseComponent } from './product-showcase/product-showcase.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
     ProductShowcaseComponent,
     ShoppingCartComponent
   ],
-  providers: [],
+  providers: [provideHttpClient()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

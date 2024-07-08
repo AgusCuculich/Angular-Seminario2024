@@ -17,7 +17,7 @@
                 component gets destroyed, the async pipe unsubscribes automatically to avoid potential memory leaks.-->
                     <tr>
                         <td>{{product.name | titlecase}}</td>
-                        <td>{{product.price}}</td>
+                        <td>{{product.price | currency}}</td>
                         <td class="quantityColumn">
                             <button (click)="modifyQuantity(1, product)">+</button>
                             {{product.quantity}}
