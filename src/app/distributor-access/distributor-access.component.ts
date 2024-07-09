@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class DistributorAccessComponent {
 
+  formSubmit(event: Event) {
+    event.preventDefault();
+  }
 }

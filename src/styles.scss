@@ -17,10 +17,8 @@ body {
     width: 100vw;
     padding: 2vw;
     background-color: #efeae4;
-    display: grid;
-    grid-template-rows: fit-content auto auto;
-    grid-row-gap: 2vw;
     font-size: 1.8rem;
+    position: relative;
 }
 
 router-outlet {

@@ -1,0 +1,22 @@
+main {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 60vh;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+form {
+    display: flex;
+    height: fit-content;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5rem;
+    background-color: #F3B7AD;
+    border-radius: 2rem;
+}
+
+input {
+    margin-bottom: 1rem;
+}

@@ -8,12 +8,14 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { provideHttpClient } from '@angular/common/http';
 import { MainContentComponent } from './main-content/main-content.component';
 import { DistributorAccessComponent } from './distributor-access/distributor-access.component';
+import { FooterContentComponent } from './footer-content/footer-content.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainContentComponent,
     DistributorAccessComponent,
+    FooterContentComponent,
   ],
   imports: [
     BrowserModule,
