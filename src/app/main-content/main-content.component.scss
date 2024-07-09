@@ -1,0 +1,14 @@
+main {
+    display: grid;
+    grid-template-rows: repeat (2, minmax(400px, auto));
+    gap: 2%;
+}
+
+@media only screen and (min-width: 1200px) {
+
+    main {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "products shopping";
+    }
+}

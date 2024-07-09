@@ -2,15 +2,11 @@
   <h1>Mi marca</h1>
   <nav>
     <ul>
-      <li><a href="">Products</a></li>
-      <li><a href="">About Us</a></li>
-      <li><a href="">Distributor Access</a></li>
+      <li><a [routerLink]="'/home'">Products</a></li>
+      <li><a [routerLink]="'/home'">About Us</a></li>
+      <li><a [routerLink]="'/login'">Distributor Access</a></li>
     </ul>
   </nav>
 </header>
-<main>
-  <app-product-showcase></app-product-showcase>
-  <app-shopping-cart></app-shopping-cart>
-</main>
 
 <router-outlet />
