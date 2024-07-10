@@ -1,9 +1,15 @@
 #mainHeader {
+    padding-right: 2vw;
+    padding-left: 2vw;
     display: grid;
     height: fit-content;
     grid-template-rows: auto auto;
     margin-bottom: 2vh;
     text-align: center;
+    background-color: #efeae4;
+    position: sticky;
+    top: 0;
+    z-index: 20;
     h1 {
         padding: 2%;
         font-size: 4rem;

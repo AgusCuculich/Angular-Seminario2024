@@ -3,17 +3,21 @@ ul {
 }
 
 footer {
-    margin-top: 3rem;
+    position: absolute;
+    bottom: 0;
+    font-size: 1rem;
+    margin-top: 2rem;
     width: 100%;
-    min-height: 20rem;
-    max-height: 30rem;
+    height: 25rem;
     background-color: #EC6A52;
     display: grid;
+    padding-left: 10%;
+    padding-right: 10%;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2, fit-content);
     grid-template-areas: 
-    "contact followUs"
-    "contact subscribe";
+    "contact subscribe"
+    "contact followUs";
 }
 
 footer h3 {
@@ -23,20 +27,25 @@ footer h3 {
 
 section.contact {
     grid-area: contact;
-    margin-left: 10%;
     ul {
         li {
-            margin-bottom: 1rem;
+            display: flex;
+            justify-content: baseline;
+        }
+        li + li {
+            margin-top: 2rem;
         }
     }
 }
 
 section.followUs {
     display: flex;
+    height: fit-content;
     flex-direction: column;
     grid-area: followUs;
     h3 {
         text-align: center;
+        margin-top: 0.5rem;
     }
     ul {
         height: fit-content;
@@ -47,12 +56,47 @@ section.followUs {
     }
 }
 
+section.subscribe {
+    grid-area: subscribe;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    h3 {
+        text-align: center;
+    }
+    form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        input {
+            width: 100%;
+        }
+        button {
+            background-color: #9DBDBA;
+            border: #9DBDBA;
+            font-weight: bold;
+            padding: 0.5rem;
+            margin-top: 0.5rem;
+        }
+    }
+}
+
 @media only screen and (min-width: 600px) {
     
     footer {
-        position: absolute;
-        bottom: 0;
-        left: 0;
+        font-size: 1.6rem;
+    }
+
+    section.subscribe form {
+        flex-direction: row;
+        justify-content: center;
+        input {
+            width: 50%;
+            padding: 0.4rem;
+            margin-top: 0.5rem;
+        }
     }
 
 }

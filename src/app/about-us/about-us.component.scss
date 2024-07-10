@@ -1,0 +1,80 @@
+ul {
+    list-style: none;
+}
+
+.hidden {
+    display: none;
+}
+
+section.aboutUs {
+    display: grid;
+    min-height: 40rem;
+    grid-template-columns: 30% 70%;
+    background-color: #F8B042;
+    border-radius: 2rem;
+    margin: 0 auto;
+    scroll-margin-top: 8ex;
+}
+
+section.aboutUs {
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 84%;
+        justify-content: space-evenly;
+        background-color: white;
+        margin-left: 15%;
+        text-decoration: underline;
+        button {
+            height: fit-content;
+            max-width: fit-content;
+            border: none;
+            background-color: white;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            border-radius: 0 2rem 2rem 0;
+            svg {
+                margin-left: 0.2rem;
+            }
+        }
+        button:hover {
+            background-color: #F8B042;
+            svg {
+                transform: rotateY(360deg);
+                transition: 2s;
+            }
+        }
+    }
+}
+
+section.aboutUs .info {
+    background-color: white;
+    padding: 5%;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+section.aboutUs .info .textContainer {
+    height: 100%;
+    align-content: center;
+    h3 {
+        margin-bottom: 1rem;
+    }
+    li + li {
+        margin-top: 1rem;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    section.aboutUs {
+        grid-template-columns: 20% 80%;
+        width: 50%;
+        .buttons {
+            button {
+                padding: 1rem;
+            }
+        }
+    }
+}

@@ -20,7 +20,7 @@ table.shoppingCart {
 }
 
 table.shoppingCart th, td {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #F3B7AD;
     text-align: center;
     padding: 0.8rem;
 }
@@ -51,4 +51,7 @@ table.resume {
 button {
     height: 24px;
     width: 24px;
+    background-color: #F3B7AD;
+    border: none;
+    filter: drop-shadow(1px 1px 2px #000);
 }

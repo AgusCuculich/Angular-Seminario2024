@@ -9,6 +9,7 @@ import { provideHttpClient } from '@angular/common/http';
 import { MainContentComponent } from './main-content/main-content.component';
 import { DistributorAccessComponent } from './distributor-access/distributor-access.component';
 import { FooterContentComponent } from './footer-content/footer-content.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { FooterContentComponent } from './footer-content/footer-content.componen
     MainContentComponent,
     DistributorAccessComponent,
     FooterContentComponent,
+    AboutUsComponent,
   ],
   imports: [
     BrowserModule,
