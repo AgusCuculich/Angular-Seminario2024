@@ -1,6 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ProductCartService } from '../product-cart.service';
-import { Product } from '../product-showcase/Product';
+import { Component, OnInit } from '@angular/core';
+import { ProductCartService } from '../../services/product-cart.service';
+import { Product } from '../../models/Product';
 import { TitleCasePipe, CommonModule } from '@angular/common';
 import { Observable } from 'rxjs';
 

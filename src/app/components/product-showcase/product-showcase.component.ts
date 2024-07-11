@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from './Product';
+import { Product } from '../../models/Product';
 import { TitleCasePipe, CommonModule } from '@angular/common';
 import { CurrencyComponent } from '../currency/currency.component';
-import { ProductCartService } from '../product-cart.service';
-import { ProductDataService } from '../product-data.service';
+import { ProductCartService } from '../../services/product-cart.service';
+import { ProductDataService } from '../../services/product-data.service';
 
 @Component({
   selector: 'app-product-showcase',

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MainContentComponent } from './main-content/main-content.component';
-import { DistributorAccessComponent } from './distributor-access/distributor-access.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+import { DistributorAccessComponent } from './pages/distributor-access/distributor-access.component';
 
 const routes: Routes = [
   {                                          
@@ -10,7 +10,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },{
     path: 'home',
-    component: MainContentComponent
+    component: HomePageComponent
   },{
     path: 'login',
     component: DistributorAccessComponent
