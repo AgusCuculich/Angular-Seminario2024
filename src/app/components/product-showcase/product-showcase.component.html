@@ -8,8 +8,8 @@
                 </div>
                 <h2>{{product.name | titlecase }}</h2>
                 <div class="currencyContainer">
-                    <app-currency [precioDolares]="product.price" [precioPesos]="product.price" [pais]="'US'"></app-currency>
-                    <app-currency [precioDolares]="product.price" [precioPesos]="product.price" [pais]="'arg'"></app-currency>
+                    <app-currency [precioDolares]="product.price/this.dollar" [pais]="'US'"></app-currency>
+                    <app-currency [precioPesos]="product.price" [pais]="'arg'"></app-currency>
                 </div>
                 <button class="cartBtt" (click)="addToCart(product)">
                     <img src='assets/img/cartIcon.png' alt="Cart icon"/>

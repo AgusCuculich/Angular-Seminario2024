@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Product } from '../../models/Product';
 import { TitleCasePipe, CommonModule } from '@angular/common';
 import { CurrencyComponent } from '../currency/currency.component';
 import { ProductCartService } from '../../services/product-cart.service';
 import { ProductDataService } from '../../services/product-data.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-product-showcase',
@@ -12,10 +13,12 @@ import { ProductDataService } from '../../services/product-data.service';
   templateUrl: './product-showcase.component.html',
   styleUrl: './product-showcase.component.scss'
 })
-export class ProductShowcaseComponent implements OnInit {
-  products: Product[] = [];
+export class ProductShowcaseComponent implements OnInit, OnDestroy {
+  private subs: Subscription[] = [];
 
   potato$ = this.productDataService.getAll();
+  dollarRates: any;
+  dollar!: number;
 
   constructor(
     private cart: ProductCartService,
@@ -29,7 +32,25 @@ export class ProductShowcaseComponent implements OnInit {
   Es buena práctica inyectar los servicios en lugar de instanciarlos (incluso si se lo usa en un servicio).
   */
 
-  ngOnInit(): void { }
+  InitSubscriptions() { 
+    this.subs.push(
+      this.productDataService.getDollarRates().subscribe(
+        data => {
+          this.dollarRates = data;
+          this.dollar = this.dollarRates.venta;
+          console.log(this.dollarRates.venta);
+        }
+      )
+    );
+  }
+
+  ngOnInit(): void {
+    this.InitSubscriptions();
+  }
+
+  ngOnDestroy() {
+    this.subs.forEach(s => s.unsubscribe());
+  }
 
   addToCart(product: Product): void {
     this.cart.addToCart(product);
