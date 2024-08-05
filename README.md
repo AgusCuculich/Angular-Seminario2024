@@ -1,20 +1,20 @@
-# Tabla de contenido
-
-[Introducción](#introducción)
-[Estructura web](#estructura-web)
-[Requisitos mínimos](#requisitos-mínimos)
-[Estructura de directorios](#estructura-de-directorios-del-proyecto)
-[Estructura del código](#estructura-del-código)
-[Instalación local](#instalación-local)
-[Proyecto en StackBlitz](#proyecto-en-stackblitz)
-[Datos del alumno](#datos-del-alumno)
-[Referencias y recursos](#referencias-y-recursos)
+* [Introducción](#introducción)
+* [Estructura web](#estructura-web)
+* [Requisitos mínimos](#requisitos-mínimos)
+* [Estructura de directorios](#estructura-de-directorios-del-proyecto)
+* [Estructura del código](#estructura-del-código)
+    * [Componentes](#componentes)
+    * [Servicios y APIs](#servicios-y-apis)
+    * [Modelos](#modelos)
+* [Instalación local](#instalación-local)
+* [Proyecto en StackBlitz](#proyecto-en-stackblitz)
+* [Referencias y recursos](#referencias-y-recursos)
 
 # Introducción
 
 En este proyecto final desarrollado en Angular para el seminario de Angular 2024, simularemos el desarrollo de una página web resposive para una pyme que produce y comercializa una amplia gama de productos de papas.
 
-### Estructura web:
+# Estructura web:
 
 * **Header**: compuesta del nombre de la pyme y una barra de navegación que permite un acceso sencillo y eficiente a los principales apartados de la página web.
 * **Sección de productos**: presenta los productos en un formato de cartas donde se ve el nombre del producto, una foto del mismo y su precio tanto en pesos argentinos como en dólares, además de exhibir un botón que permite añadir el producto al carrito de compras.
@@ -71,7 +71,7 @@ Diagrama de estructura de directorios y archivos en Angular (con un ejemplo de l
 
 # Estructura del código
 
-### Componentes
+## Componentes
 
 **home-page** Sirve como contenedor para los componentes (product-showcase, about-us, shopping-cart) visualizados en la página principal.
 
@@ -97,7 +97,7 @@ Funcionalidades que cumple:
 - Llama a una función encargada de eliminar un producto del carrito de compras.
 - Almacena en un atributo un observable que contendrá el valor total a pagar y que será visualizado en el precio final a pagar. Este valor cambiará antes los modificaciones (añadir, aumentar y disminuir cantidades o eliminar productos) en el carrito.
 
-### Servicios y APIs
+## Servicios y APIs
 
 **product-cart** Maneja la lógica del carrito de compras. Contiene las funciones definidas para añadir productos, aumentar y disminuir las cantidades de los mismos, y eliminar productos del carrito de compras. 
 
@@ -125,7 +125,7 @@ Api que consume:
 
 <https://dolarapi.com/v1/dolares/oficial>
 
-### Modelos
+## Modelos
 
 **Product (Interface)** define la estructura de un objeto que representa un producto. 
 
@@ -160,14 +160,6 @@ ng serve
 # Proyecto en StackBlitz
 
 <https://stackblitz.com/~/github.com/AgusCuculich/Angular-Seminario2024>
-
-# Datos del alumno
-
-* **Nombre:** Agustina
-* **Apellido:** Cuculich
-* **DNI** 43980326
-* **Email** cuculichagustina@gmail.com
-* **Sede** Tandil
 
 # Referencias y recursos
 
